@@ -1,9 +1,0 @@
-[Cliente{
-	SUPER=PessoaFisica{
-	Pessoa{nome='2', email='2', telefone='2', endereco='2', dataAniversario=2}, 
-cpf='2'}, 
-	limiteCredito=2.0}, Cliente{
-	SUPER=PessoaFisica{
-	Pessoa{nome='3', email='3', telefone='3', endereco='3', dataAniversario=3}, 
-cpf='3'}, 
-	limiteCredito=3.0}]
