@@ -2,14 +2,32 @@ package model.beans;
 
 import java.util.Date;
 import java.util.Objects;
+import java.util.Scanner;
 
 
-public class Pessoa {
+public class Pessoa implements java.io.Serializable{
     private String nome;
     private String email;
     private String telefone;
     private String endereco;
     private String dataAniversario;
+
+    public Pessoa(){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Nome:");
+        this.setNome(in.nextLine());
+        System.out.println("Email:");
+        this.setEmail(in.nextLine());
+        System.out.println("Telefone:");
+        this.setTelefone(in.nextLine());
+        System.out.println("Endereço");
+        this.setEndereco(in.nextLine());
+        System.out.println("Data de Nascimento: dd/mm/aaaa");
+        this.setDataAniversario(in.nextLine());
+
+
+
+    }
 
     public String getNome() {
         return nome;

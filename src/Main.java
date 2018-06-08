@@ -1,19 +1,20 @@
-import controller.FrontController;
-import model.beans.Cliente;
-import view.ShellGUI;
+import controller.Controller;
+import model.persistence.SalvarController;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.HashSet;
-import java.util.Set;
 
-public class Main {
-    public static void main(String[] args) throws IOException {
 
-        ShellGUI frontEnd = new ShellGUI();
-        FrontController frontController = new FrontController(frontEnd);
 
-        frontController.run();
+public class Main implements java.io.Serializable {
+    public static void main(String[] args)  {
+       SalvarController in = new SalvarController();
+        Controller principal = null;
+        if(in.lerController().equals(null)){
+            principal = new Controller();
+        }
+        else{
+            principal = in.lerController();
+        }
+
+        principal.run();
     }
 }

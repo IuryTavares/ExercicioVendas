@@ -2,7 +2,7 @@ package model.beans;
 
 import java.util.Objects;
 
-public class PessoaJuridica extends Pessoa {
+public class PessoaJuridica extends Pessoa implements java.io.Serializable{
     private String cnpj;
 
     @Override

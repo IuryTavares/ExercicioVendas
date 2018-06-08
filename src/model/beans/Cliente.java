@@ -1,7 +1,23 @@
 package model.beans;
 
-public class Cliente extends PessoaFisica {
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Cliente extends PessoaFisica implements java.io.Serializable{
     private double limiteCredito;
+
+    public Cliente(){
+        super();
+
+        Scanner in = new Scanner(System.in);
+        try{
+            System.out.println("Limite de crédito:");
+            this.setLimiteCredito(in.nextDouble());
+        }catch (InputMismatchException e){
+            System.out.println("Digite novamente, valor inválido\nLimite de crédito:");
+            this.setLimiteCredito(in.nextDouble());
+        }
+    }
 
     public double getLimiteCredito() {
         return limiteCredito;

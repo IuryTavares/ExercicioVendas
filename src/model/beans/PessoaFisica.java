@@ -1,12 +1,16 @@
 package model.beans;
 
 import java.util.Objects;
+import java.util.Scanner;
 
-public class PessoaFisica extends Pessoa {
+public class PessoaFisica extends Pessoa implements java.io.Serializable{
     private String cpf;
 
     public PessoaFisica(){
-
+        super();
+        Scanner in = new Scanner(System.in);
+        System.out.println("Cpf:");
+        this.setCpf(in.nextLine());
     }
 
     public String getCpf() {
